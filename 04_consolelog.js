@@ -1,3 +1,4 @@
+
 //console.log prints everything in new line .
 console.log(34);
 //can pass multiple comma separated values .
