@@ -1,4 +1,5 @@
-// https://262.ecma-international.org/10.0/#sec-abstract-equality-comparison
+// https://262.ecma-international.org/10.0/#sec-abstract-equality-comparison  
+// here (!) don't mean logical not . 
 // https://262.ecma-international.org/10.0/#sec-strict-equality-comparison
 
 //
@@ -26,7 +27,7 @@ console.log(x === x);
 console.log(null == undefined);    //true 
 console.log(10 == "10"); // ToNumber("10") => 10
 console.log("55"==55);
-console.log(false == 0);
+console.log(false == 0); 
 console.log(true == 13); //false 
 console.log(10 == { valueOf() {return 10}}); // ToPrimitive . hint => number // will convert to "10" , then toString will convert to 10 , 10 == 10 .
 

@@ -10,7 +10,7 @@ i.e. it did convert 22 from number to string and then did concatenation.
 
 - similarly this concept exist in JS also. 
 - different languages have different philosophy like python prefers explicit but java do implicit .
-- for JS things are a bit more tricky , as JS  _handles a wide variety of cases_.
+- for JS things are a bit more tricky , as JS  __handles a wide variety of cases__.
 - as a JS developer , you should know JS well , not its framework.
 
 ## abstract operations 
@@ -20,6 +20,7 @@ i.e. it did convert 22 from number to string and then did concatenation.
 - we cannot directly call them but few JS operations like subtraction , addition etc internally calls them and hence we can mimic them using these operations.
 
 ### ToNumber 
+https://262.ecma-international.org/10.0/#sec-subtraction-operator-minus
 - we can use "-" operator to mimic ToNumber.
 - 2 and 4 : take the values from right and left.
 - 5 and 6: whatever you have in lnum(a) and lrum(b), convert that to number using ToNumber abstract operation.`lnum = ToNumber(a);` and `rnum = ToNumber(b);` and `return = lnum - rnum`
@@ -31,6 +32,8 @@ i.e. it did convert 22 from number to string and then did concatenation.
 - object => 
 
 ### ToString 
+https://262.ecma-international.org/10.0/#sec-addition-operator-plus   
+https://262.ecma-international.org/10.0/#sec-tostring
 - we can use "+" operator to mimic ToString.
 - The addition operator either performs string concatenation or numeric addition.
 - get ` lval ` and `rval ` and perform `ToPrimitive()` on `lval`and on `rval`.
@@ -49,11 +52,11 @@ i.e. it did convert 22 from number to string and then did concatenation.
 2.3 else preferredType is number , hint="number"  
 2.4 if hint is "default" , then hint="number"  
 2.5 calls ordinaryToPrimitive(input, hint)  
-2.6 if hint : string  => [ tostring() , valueof() ]  : if tostring() returns object move to valueof()  
-2.7 if hint : number  => [ valueof()  t,ostring() ]  : if valueof() returns object move to tostrng()  
+2.6 if hint : string  => [ tostring() , valueof() ]  : if tostring() returns object then call  valueof()  
+2.7 if hint : number  => [ valueof()  , tostring() ]  : if valueof() returns object then call tostring()  
 2.8 value of toString() are not abstract operations . that means we can call them.  
 *2.9 by default toString() on a object returns `'[object object]'`  
-*3.0 by default valueOf() on an object returns same object 
+*3.0 by default valueOf() on an object returns same object   
 3.1 for array : valueOf() => same array and toString() => print array without brackets.  
 
 ### ToBoolean
@@ -62,6 +65,7 @@ i.e. it did convert 22 from number to string and then did concatenation.
 - therefore , it  maintains a list of false values .
 - https://262.ecma-international.org/10.0/#sec-toboolean
 - `null , undefined , +0 , -0 , NaN , "" , false` : if any of these in argument we return `false`, else we return `true`.
-- we can use logical NOT operator(!) to mimic ToBoolean .
+- we can use logical NOT operator(!) to mimic ToBoolean .  
+https://262.ecma-international.org/10.0/#sec-logical-not-operator
 - !a => old value = ToBoolean(a) 
 - if(old value is true ) : returns `false` ; else returns `true`.

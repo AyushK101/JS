@@ -13,7 +13,7 @@ console.log(-0);
 // js don't distinguish b/w string and character.
 console.log("adf");
 console.log('adf');
-console.log(`adf`);
+console.log(`adf`); //backticks
 
 // boolean
 console.log(true);
