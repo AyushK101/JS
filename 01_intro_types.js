@@ -31,3 +31,10 @@ console.log(Symbol('hello'));
 
 //operators : tools that can be applied on different values to get desired values .
 
+// better comments : 
+/**
+ * 
+ * 
+ * 
+ * 
+ */
