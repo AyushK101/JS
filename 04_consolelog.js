@@ -7,3 +7,13 @@ console.log(true, null , 13 , "ayush");
 //to print in something in same line.
 process.stdout.write("hx");
 process.stdout.write("afa");
+
+
+
+
+for(let i=0 ; i < 4; i++) {
+    setTimeout(function () {
+        console.log("hi" , i);  
+    }, i*1000);
+}
+

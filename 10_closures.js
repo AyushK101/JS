@@ -51,7 +51,7 @@ x();
 
 //##################### case 
 function test() {
-    for(var i = 0; i<3; i++) { //function scope of test for var i 
+    for(var i = 0; i<3; i++) { //function scope is of test for var i 
         setTimeout(function exec() {  // timer => 0sec , 1sec , 2sec : don't execute till loop is over : till then value of i become 3.
             console.log(`i : ${i}`);
         }, i*1000);
@@ -80,7 +80,7 @@ const add = (function exec( )  {
     let counter = 0;
     return function process() {
         counter +=1; 
-        console.log(counter);
+        console.log(counter)
         return counter 
     }
 })();
