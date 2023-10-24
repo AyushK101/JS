@@ -1,3 +1,6 @@
+// Asynchronous programming is a technique that enables your program to start a potentially long-running task and still be able to be responsive to other events while that task runs,
+// rather than having to wait until that task has finished. Once that task has finished, your program is presented with the result.
+
 //How JS  handles ASYNC operations ?
 // most practical part , will interact daily //
 /**
@@ -62,5 +65,11 @@ console.log("bye bye ");
  * 
  */
 
+//synchronous writes block the event loop 
+
+// search loupe.com for event , call stack visualization 
+
+// will console.log go into event queue ?
+// we don't know . therefore consider it just a for loop
 
 

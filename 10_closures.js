@@ -1,5 +1,5 @@
 //microsoft's devops work is done by accenture .
-//closures 
+//closures : is when a function remembers its lexical scope(whatever things were accessible in that scope) even when the function is executed outside that lexical scope 
 function todo(task) {
     console.log("start of todo");
     setTimeout(function fun() {

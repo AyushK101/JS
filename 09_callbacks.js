@@ -1,7 +1,7 @@
 // ###########################################################################
 
 
-// callbacks : a callback is a function that is passed to another function as an argument .
+// CALLBACKS : a callback is a function passed to another function ,
 // ex: f(g(x)) => g(x) is kind of like a callback in maths 
 // to pass a callback we can use function expression .
 

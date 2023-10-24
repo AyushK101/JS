@@ -1,3 +1,4 @@
+//is not part of ecma-script . it is provided by runtime 
 
 //console.log prints everything in new line .
 console.log(34);
@@ -16,4 +17,6 @@ for(let i=0 ; i < 4; i++) {
         console.log("hi" , i);  
     }, i*1000);
 }
+
+
 
