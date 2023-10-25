@@ -1,5 +1,27 @@
-//microsoft's devops work is done by accenture .
-//closures : is when a function remembers its lexical scope(whatever things were accessible in that scope) even when the function is executed outside that lexical scope 
+// Closures are functions that have access to the variables that are present in their scope chain even if the outer function ceases to exist.
+// Scope chain refers to the fact that parent scope does not have access to the variables inside its children's scope,
+// but the children's scope does have access to the variables present in its parent scopes. 
+
+//Even if the outer function ceases to exist, it still has access to its parent variables.
+
+//ex: Use case of closure: Creating a fetch utility with closures
+
+// Advantages of closures
+// Here are some advantages of closures:
+
+// They allow you to attach variables to an execution context.
+// Variables in closures can help you maintain a state that you can use later.
+// They provide data encapsulation.
+// They help remove redundant code.
+// They help maintain modular code.
+// Disadvantages of closures
+// There are two main disadvantages of overusing closures:
+
+// The variables declared inside a closure are not garbage collected.
+// Too many closures can slow down your application. This is actually caused by duplication of code in the memory.
+
+
+
 function todo(task) {
     console.log("start of todo");
     setTimeout(function fun() {

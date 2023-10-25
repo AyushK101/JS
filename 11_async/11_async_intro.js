@@ -51,6 +51,7 @@ console.log("bye bye ");
  * ans: 
  */
 
+// EVENT QUEUE & EVENT LOOP EXAMPLE !
 /**
  * setTimeout:  browser / node (runtime) based feature . js don't know how to execute it . js will take this call to the runtime .
  * even if runtime completed its task before loop/js , js won't listen to runtime and will keep on executing its own native code.
@@ -61,15 +62,7 @@ console.log("bye bye ");
  * the conditions to start executing tasks from event queue are , 
  * 1. the call stack should be empty i.e. no function in the call stack is left to be executed .
  * 2. the global code is also done. 
- * 3. 
+ * NOTE : synchronous writes block the event loop  
+ * NOTE : search loupe.com for event , call stack visualization 
  * 
  */
-
-//synchronous writes block the event loop 
-
-// search loupe.com for event , call stack visualization 
-
-// will console.log go into event queue ?
-// we don't know . therefore consider it just a for loop
-
-

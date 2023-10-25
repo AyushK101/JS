@@ -1,3 +1,20 @@
+/**
+ *  execution context is the environment where a specific portion of the code executes. (useful lexical scope for that code )
+ * 
+ * This mechanism of allocating memory for variables and initializing with the value undefined at the execution context's creation phase is called Variable Hoisting.
+ * 
+ * 
+ * 
+ * Lexical refers to the definition of things.
+ * Lexical scope is the definition area of an expression.
+ * In other words, an item's lexical scope is the place in which the item got created.
+ * an item's definition space is its lexical scope.
+ * code within an item's lexical scope can access the item
+ */
+
+
+
+
 //phase 1 : parsing
 
 //assume a entity scope manager , which helps js to manage scopes .
