@@ -22,7 +22,7 @@
 */
 
 
-// in js we can pass functions as an argument to another function .
+// *in js we can pass functions as an argument to another function* .
 function fun() {
     console.log("fun called");
 }
@@ -49,6 +49,12 @@ gun(fun);
 
 // 2. Named  
 
+gun(fun);
+
+gun(fun);
+
+gun(fun);
+
 gun(function logger() {    
     console.log("new function passed");
     console.trace();
@@ -70,8 +76,7 @@ var x = function gun() {
 x();
 console.log(x);
 console.log(gun);// error 
-
-
+// console.log(gun()); // immediate calling 
 
 
 

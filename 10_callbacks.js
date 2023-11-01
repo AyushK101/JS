@@ -1,17 +1,38 @@
-//A callback function is a function that is passed as an argument to another function, to be “called back” at a later time. 
+//A callback function is a function that is passed as an argument to another function, 
+
+// *any function that get called asynchronously is callback 
+// *basically any function called by web api is callback 
+
+//to be “called back” at a //*later time .
 //A function that accepts other functions as arguments is called a higher-order function, which contains the logic for when the callback function gets executed. It’s the combination of these two that allow us to extend our functionality
 
 // ex: f(g(x)) => g(x) is kind of like a callback in maths 
-// to pass a callback we can use function expression .
+// *to pass a callback we can use function expression .
 
 
 // Why use Callback functions?
 //Most of the time we are creating programs and applications that operate in a synchronous manner. 
 //In other words, some of our operations are started only after the preceding ones have completed. 
 //Often when we request data from other sources, such as an external API, we don’t always know when our data will be served back. 
-//In these instances we want to wait for the response, but we don’t always want our entire application grinding to a halt while our data is being fetched. These situations are where callback functions come in handy.
+//In these instances we want to wait for the response, but we don’t always want our entire application grinding to a halt while our data is being fetched.
+// These situations are where callback functions come in handy.
 
-function fun(x , fn ) {  //consuming the callback 
+
+// A callback's primary purpose is to execute code in response to an event.
+// These events might be user-initiated, such as mouse clicks or typing. 
+// With a callback, you may instruct your application to "execute this code every time the user clicks a key on the keyboard."
+
+// ex:
+// const button = document.getElementById('button');
+// function callback(){
+// console.log("Hello world");
+// }
+
+// button.addEventListener('click',callback);
+
+
+//
+function fun(x , fn ) {  //*consuming the callback 
     /**
      * x : number
      * fn : callback function
@@ -20,11 +41,11 @@ function fun(x , fn ) {  //consuming the callback
     for(let i = 0 ; i < x ; i++) {
     console.log(i);
     }
-    fn();//calling the callback passed function
+    fn();//*calling the callback passed function
     //some more logic
 }
 
-fun(10 , function log() {     //callback function 
+fun(10 , function log() {     //*callback function 
     console.log("custom logger"); 
 }); 
 
@@ -32,7 +53,7 @@ fun(10 , function log() {     //callback function
 
 // callbacks applications ##########################################################
 let Arr=[1,2,3,4,5];
-let z = rr.map(function process(v , i) {  //expects a callback function : map function : for all the elements of the given array , it passes the elements as an argument to the callback.
+let z = Arr.map(function process(v , i) {  //expects a callback function ; map function : for all the elements of the given array , it passes the elements as an argument to the callback.
     /** //map returns an array , and the values of array are whatever you return in every process call.
      * v : value 
      * i : index 
@@ -79,15 +100,18 @@ console.log(x);
 
 
 
-//##############################################
-// SetTimeout // SetInterval 
+//*##############################################
+// *SetTimeout // SetInterval 
 // these two functions are not by default given to us by js.
 // then how are we able to use it ?
 
-// SetTimeout : it is a function that helps to execute some task once after a certain timer. it returns a unique id .
-// clearTimeout: removes given added setTimeout 
-// SetInterval : it is a function that helps us to execute some task again and again after a given interval . it returns a unique id also.
+// *SetTimeout : it is a function that helps to execute some task once after a certain timer. it returns a unique id .
+// *it require a function and a time in millisecond .
+// *clearTimeout: removes given added setTimeout .
 
+
+// *SetInterval : it is a function that helps us to execute some task again and again after a given interval . it returns a unique id also.
+// *clearInterval
 
 console.log("start");   
 setTimeout(function execute(){

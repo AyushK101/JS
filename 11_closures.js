@@ -1,8 +1,8 @@
-// Closures are functions that have access to the variables that are present in their scope chain even if the outer function ceases to exist.
+// *Closures are functions that have access to the variables that are present in their scope chain even if the outer function ceases to exist.
 // Scope chain refers to the fact that parent scope does not have access to the variables inside its children's scope,
 // but the children's scope does have access to the variables present in its parent scopes. 
 
-//Even if the outer function ceases to exist, it still has access to its parent variables.
+// Even if the outer function ceases to exist, it still has access to its parent variables. full scope chain
 
 //ex: Use case of closure: Creating a fetch utility with closures
 
@@ -14,13 +14,15 @@
 // They provide data encapsulation.
 // They help remove redundant code.
 // They help maintain modular code.
+
 // Disadvantages of closures
 // There are two main disadvantages of overusing closures:
 
 // The variables declared inside a closure are not garbage collected.
 // Too many closures can slow down your application. This is actually caused by duplication of code in the memory.
 
-
+// using setTimeout and setInterval for demonstrating closures // async 
+//#################################################
 
 function todo(task) {
     console.log("start of todo");
@@ -36,22 +38,24 @@ console.log("ending");
 // at the time instance when function fun will be called , the todo function is already over.
 // if fun is called after the completion of todo , and todo has ended , how fun is able to access task variable ??
 // this happens due to closures !
-// closure :  every  function "remembers" its lexical scope even when the function is executed outside the lexical scoping .
-// closure is the property of remembering the variable rather than the value of the variable .
+// *closure :  every  function "remembers" its lexical scope even when the function is executed outside the lexical scoping . (here fun is executed when counter completed line 37 i.e. ended code)
+// *closure is the property of remembering the variable rather than the value of the variable .
 
 
-//###########
+//#################################################
+
 function a(name) {
     return function b() {
         console.log(name);
-    }
+    };
 }
 
 let x = a("ayush");
 console.log(x);
 x();
 
-//##################
+//##########################################
+
 function fun(){
     let name = "harshit";
     function callback( ){
@@ -68,10 +72,11 @@ var college = "iit delhi";
 x();
 
 // if todo is completed it will be removed from callback how actually the variables still persist ? where are they ? 
-// there is a garbage collector in js like java , which give 2nd chance to unused variables and if they are not yet used , then sweep them through `mark and sweep algorithm.
+// *there is a garbage collector in JS like java , which give 2nd chance to unused variables and if they are not yet used , then sweep them through `mark and sweep algorithm.
 
 
-//##################### case 
+//####################################### case 
+
 function test() {
     for(var i = 0; i<3; i++) { //function scope is of test for var i 
         setTimeout(function exec() {  // timer => 0sec , 1sec , 2sec : don't execute till loop is over : till then value of i become 3.
@@ -82,7 +87,7 @@ function test() {
 
 test();
 
-// 
+// #########################################
 
 function test() {
     for(let i = 0; i<3; i++) {  // let is block scope  : that means it  is only available in one block : i is not present in the scope of exec

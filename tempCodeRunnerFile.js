@@ -1,5 +1,14 @@
-for(let i=0 ; i < 4; i++) {
-    setTimeout(function () {
-        console.log("hi");  
-    }, i*1000);
-}
+
+
+
+var counter = 0;
+
+
+
+
+
+setInterval(function counter() {
+  
+    counter = counter + 1;
+    console.log(counter);
+} , 3000);

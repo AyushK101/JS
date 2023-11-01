@@ -1,8 +1,8 @@
-// Asynchronous programming is a technique that enables your program to start a potentially long-running task and still be able to be responsive to other events while that task runs,
+// *Asynchronous programming is a technique that enables your program to start a potentially long-running task and still be able to be responsive to other events while that task runs,
 // rather than having to wait until that task has finished. Once that task has finished, your program is presented with the result.
 
 //How JS  handles ASYNC operations ?
-// most practical part , will interact daily //
+
 /**
  * javascript is a single threaded language.
  * javascript by default only supports synchronous code execution .
@@ -32,7 +32,7 @@
 
 function process( )  {
     console.log("start");
-    setTimeout(function exec() {
+    setTimeout(function exec() {  
         
         console.log("executed some task")
     }, 3000);
@@ -53,6 +53,7 @@ console.log("bye bye ");
 
 // EVENT QUEUE & EVENT LOOP EXAMPLE !
 /**
+ * using setTimeout to demonstrate async 
  * setTimeout:  browser / node (runtime) based feature . js don't know how to execute it . js will take this call to the runtime .
  * even if runtime completed its task before loop/js , js won't listen to runtime and will keep on executing its own native code.
  * it can't hinder the flow of js , therefore it will make the callback and wait in the queue . 
@@ -63,6 +64,7 @@ console.log("bye bye ");
  * 1. the call stack should be empty i.e. no function in the call stack is left to be executed .
  * 2. the global code is also done. 
  * NOTE : synchronous writes block the event loop  
- * NOTE : search loupe.com for event , call stack visualization 
+ * NOTE : search http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D 
+ * for event , call stack visualization 
  * 
  */

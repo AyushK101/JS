@@ -23,11 +23,11 @@ i.e. it did convert 22 from number to string and then did concatenation.
 https://262.ecma-international.org/10.0/#sec-subtraction-operator-minus
 - we can use "-" operator to mimic ToNumber.
 - 2 and 4 : take the values from right and left.
-- 5 and 6: whatever you have in lnum(a) and lrum(b), convert that to number using ToNumber abstract operation.`lnum = ToNumber(a);` and `rnum = ToNumber(b);` and `return = lnum - rnum`
+- 5 and 6: whatever you have in lnum(a) and lrum(b), `convert that to number` using ToNumber abstract operation.`lnum = ToNumber(a);` and `rnum = ToNumber(b);` and `return = lnum - rnum`
 - rules of ToNumber
 - undefined => NaN 
 - boolean => true=>1 and false => +0.
-- string => if by itrating over the string , you only gets valid digits , JS will do same but if other chars like $ , JS won't convert to number .
+- string => `if by itrating over the string , you only gets valid digits , JS will do same but if other chars like $ , JS won't convert to number` .
 - symbol => Error 
 - object => 
 
@@ -35,7 +35,7 @@ https://262.ecma-international.org/10.0/#sec-subtraction-operator-minus
 https://262.ecma-international.org/10.0/#sec-addition-operator-plus   
 https://262.ecma-international.org/10.0/#sec-tostring
 - we can use "+" operator to mimic ToString.
-- The addition operator either performs string concatenation or numeric addition.
+- The addition operator either performs `string concatenation or numeric addition`.
 - get ` lval ` and `rval ` and perform `ToPrimitive()` on `lval`and on `rval`.
 - check : if anyone of them is string , convert both of them to string and do string concatenation/
 - otherwise convert them to number , and add them .
@@ -55,8 +55,8 @@ https://262.ecma-international.org/10.0/#sec-tostring
 2.6 if hint : string  => [ tostring() , valueof() ]  : if tostring() returns object then call  valueof()  
 2.7 if hint : number  => [ valueof()  , tostring() ]  : if valueof() returns object then call tostring()  
 2.8 value of toString() are not abstract operations . that means we can call them.  
-*2.9 by default toString() on a object returns `'[object object]'`  
-*3.0 by default valueOf() on an object returns same object   
+`*2.9 by default toString() on a object returns `'[object object]` `   
+`*3.0 by default valueOf() on an object returns same object `  
 3.1 for array : valueOf() => same array and toString() => print array without brackets.  
 
 ### ToBoolean

@@ -1,4 +1,4 @@
-/**
+/** QUERY : WILL CONSOLE.LOG GO INTO EVENT/CALLBACK QUEUE ?
  * WRITES (function which is used to display text on screen like `console.log`) may be sync or async
  * depending upon the OS , runtime environment , even the version of environment .
  * Therefore we can't say anything about console.log 
@@ -7,38 +7,30 @@
  * NOTE: in production level code , we won't use console.log , therefore no worry !)
  */
 // 
+
 // 
-// 
 
+/** disadvantages of callbacks ? WHY WE NEED PROMISES !
+* 1. callback hell : code readability hampers 
+* 2. inversion of control : when you give your function to other function , 
+* then you give control of it to that function , now it depends on it weather it will 
+* call it or not (but you want to) , call it twice or multiple times (but you wanted only once ) .
+* OR 
+* *if there is some part of code whose control we are passing to someone else and we don't know 
+* *how that part will be executed .
+* 
+*/
 
-//disadvantages of callbacks ?
-// 1. callback hell : code readability hampers 
-// 2. inversion of control : when you give your function to other function , 
-//then you give control of it to that function , now it depends on it weather it will 
-// call it or not (but you want to) , call it twice or multiple times (but you wanted only once ) .
-/** OR if there is some part of code whose control we are passing to someone else and we don't know 
- * how that part will be executed .
- * 
- */
-
-/** PROMISES : promises are special JS objects that are also considered as readability enhancers.
- * They get immediately returned from the function setup to return a promise .
- * They act as placeholder(temp. value) for the data we hope to get back from some future task .
- * We also attach the functionality we want to differ until the future task is done.
- * And promise object automatically handles the execution of this functionality.
- * So promises do two things :
- * 1) it sings up the process request to run in the runtime and give a placeholder in JS , which has value property .
- * 
- */
-
-
-/** TASKS:
+/** TASKS: CALLBACK HELL 
  * 1) write a function to download data from url
  * 2) write a function to save the download in a file and return the filename.
  * 3) write a function to upload the file to a new url .
  */
 
+//we are using callback because there is no way to return the value from fetchCustom as it gets ended .
+// pass the response in the callback and access that response in the callback function .
 
+// download some data from url
 function fetchCustom(url , fn) {
     // download content from the url
     // this download can take some time 
@@ -52,6 +44,7 @@ function fetchCustom(url , fn) {
     } , 3000);
 }
 
+// write that data in some file 
 function writeFile(data , fn) {
     console.log("write started data " , data );
     setTimeout( function process() {
@@ -62,6 +55,7 @@ function writeFile(data , fn) {
     } , 4000); 
 }
 
+// upload some  file to some newurl 
 function uploadFile(filename , newurl , fn ) {
     setTimeout(function process() {    console.log("started upload");
 
@@ -82,3 +76,5 @@ fetchCustom( "www.google.com" , function downloadcallback(response) { // downloa
         })
     });
 } );
+
+
