@@ -1,0 +1,7 @@
+
+{
+    "_comment" : "json mainly used  for providing meta data , for transferring data over the network if you are using rest conventions",
+    "name" : "ayush kumar",
+    "age" : 23
+
+}
