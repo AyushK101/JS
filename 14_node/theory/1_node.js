@@ -52,7 +52,7 @@ console.log(__dirname);
 //NOTE: by default CJSM is enabled.
 // to enable ES modules
 
-// 1. put `.mjs` extension on the file of consumption.
+// 1. put `.mjs` extension on the files of export and import to make them es/js modules.
 // .mjs tells node environment that this file is compatible for ES module-ling.
 // NOTE : before exporting , the file will be executed first.
 // 2. packages => it is a folder which contains `package.json` file.
