@@ -47,6 +47,9 @@ console.log(__dirname);
 
 // nodejs introduced a new pattern of programming/of structuring your code called 
 // *`module pattern`.
+/**
+ * *a module is nothing more than a js file that exports its code.
+ */
 // 2 ways of module pattern-
 // I. common JS modules (CMJ) {old}
 // II. ES modules 
