@@ -37,15 +37,16 @@
 // how to you access ? browser environment give global `document`.
 
 //similarly node.js also provides you globals. 
-//1. process : the process object provides information about, and control over, the current Node.js process.
+//1. process GLOBAL: the process object provides information about, and control over, the current Node.js process.
 console.log(process);
 var process = 3; //can change like a normal object
 
-//2. __dirname : The directory name of the current module. 
+//2. __dirname GLOBAL: The directory name of the current module. 
 //(this global is not always accessible)
 console.log(__dirname);
 
-//* nodejs introduced a new pattern of programming/of structuring your code called `module pattern`.
+// nodejs introduced a new pattern of programming/of structuring your code called 
+// *`module pattern`.
 // 2 ways of module pattern-
 // I. common JS modules (CMJ) {old}
 // II. ES modules 
@@ -57,14 +58,14 @@ console.log(__dirname);
 // NOTE : before exporting , the file will be executed first.
 // 2. packages => it is a folder which contains `package.json` file.
 // JSON => javascript object notation.
-// => prepare a package.json with { "type" : "module" }.
-//
+// => prepare a package.json with `{ "type" : "module" }`.
 
-//3. module : 
+
+
+//3. module GLOBAL: 
 // It is a object , which has a lot of properties.
 console.log(module);
 // module global has a property called exports which is a JS object , so we can use it .
 
-
-//4. require : helps you to consume some module 
-
+//4. require GLOBAL: helps you to consume some module 
+ 
