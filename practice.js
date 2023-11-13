@@ -1,17 +1,23 @@
-// let prm = new Promise( (res , rej) => {
-//     setTimeout(() => {
-//         console.log("hello world");
-//         rej(`hi guys this is ${rej}`);
-//     } , 2000)
-// });
+class School {
+    constructor(n , a , g) {
+        this.name=n;
+        this.age=a;
+        this.grade=g;
+    }
 
-// async () => {
-//     try {
-//         let file = await prm;
-//     } catch (error) {
-        
-//     }
-// }
 
-console.log(process.argv);
-   
+    addStudent() {
+
+    }
+
+    removeStudent() {
+
+    }
+}
+
+
+let ayush = new School("ayush", 20 , "IIV");
+let bob = new School("bob" , 20 , "IV");
+console.log(ayush , bob);
+
+//this is referring to calling site 

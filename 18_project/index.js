@@ -11,7 +11,7 @@ const axios = require('axios');
  * => https://t.me/cding_bot
  * =>
  */
-const bot = new Telegraf("6672037571:AAFKQnKtGgGQQQ_ye3nNV8ij2bvPXpXoKX0");
+const bot = new Telegraf("TOKEN");
 
 /**
  * These are events and this is called as event based programming , where you actually subscribe to a particular event.
