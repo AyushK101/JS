@@ -8,8 +8,14 @@
  * YOU DON'T HAVE TO REINVENT THE WHEEL !
  * NOTE: library is intended to do one very simple task  for you , and multiple libraries together can 
  * form a framework.
-// 1. process:The process object provides information about, and control over, the current Node.js process.
+ *   1. process:The process object provides information about, and control over, the current Node.js process.
  * 
+ * 
+ * 
+ *  The key difference between a library and a framework is "Inversion of Control". 
+ * When calling a method from a library, the developer is in control. 
+ *  With a framework, the control is inverted: the framework calls the developer's code.
+ *
  */
 //node.js globals are :
 
@@ -31,44 +37,51 @@
  * we can provide command line arguments to JS running outside browser/js running inside node.
  */
 
-// GLOBALS  
-// these are objects which are predefined/ implemented by js,access everywhere in the JS code.
+// GLOBALS :-
+// *these are objects which are predefined/ implemented by js,access everywhere in the JS code.
+
 // EX: runtime give access of features to JS , one of them is accessing the html,
 // how to you access ? browser environment give global `document`.
 
-//similarly node.js also provides you globals. 
-//1. process GLOBAL: the process object provides information about, and control over, the current Node.js process.
+// similarly node.js also provides you globals:-
+
+//*1. `process GLOBAL`:  The process object provides information and control over the current Node.js process. You can access environment variables, command line arguments, and interact with the process itself through properties and methods of this object.
+
 console.log(process);
 var process = 3; //can change like a normal object
 
-//2. __dirname GLOBAL: The directory name of the current module. 
+// *  `2. __dirname GLOBAL` : The directory name of the current module. 
 //(this global is not always accessible)
 console.log(__dirname);
 
-// nodejs introduced a new pattern of programming/of structuring your code called 
-// *`module pattern`.
-/**
- * *a module is nothing more than a js file that exports its code.
+/** MODULE PATTERN:-
+ * 
+ * nodejs introduced a new pattern of programming/of structuring your code called MODULES.
+ * *a module is nothing more than a js file that exports its code. 
+ * 
+ * There are two types of modules in js:-
+ * *1. commonJS modules (cjs) ( module.exports or exports & require )
+ * *2. ECMAScript Module (ESM) (export and import)
+ * NOTE:- by default cjs is enabled.
+ * 
  */
-// 2 ways of module pattern-
-// I. common JS modules (CMJ) {old}
-// II. ES modules 
-//NOTE: by default CJSM is enabled.
-// to enable ES modules
 
-// 1. put `.mjs` extension on the files of export and import to make them es/js modules.
-// .mjs tells node environment that this file is compatible for ES module-ling.
-// NOTE : before exporting , the file will be executed first.
-// 2. packages => it is a folder which contains `package.json` file.
-// JSON => javascript object notation.
-// => prepare a package.json with `{ "type" : "module" }`.
+/** TO ENABLE ES MODULES : two ways-
+ * * 1. set `.mjs` extensions on the files of export and import to make them ES/JS modules.
+ * { .mjs tells node environment that this file is compatible for ES module-ling}
+ *  
+ * *2. PACKAGE METHOD
+ * NOTE: package => it is a folder which contains `package.json` file.
+ * prepare a package.json with `{ "type" : "module"}
+ * 
+ */
 
 
-
-//3. module GLOBAL: 
+//* 3. module GLOBAL:-
 // It is a object , which has a lot of properties.
 console.log(module);
-// module global has a property called exports which is a JS object , so we can use it .
+// module global has a property called exports which is a JS object , which can be used to
+// export code from that module to other module.
 
-//4. require GLOBAL: helps you to consume some module 
+//* 4. require GLOBAL: helps you to consume some module 
  

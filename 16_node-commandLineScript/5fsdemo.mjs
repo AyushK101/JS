@@ -6,7 +6,7 @@ import { writeFile } from "fs";
 import {readFile} from "fs/promises"; 
 // we can do file input / output easily with fs
 
-const filePath = new URL('./index.html', import.meta.url , );
+const filePath = new URL('./index.html', import.meta.url );
 let data = await readFile(filePath , {encoding : 'utf8'}) ;
 console.log(data);
 

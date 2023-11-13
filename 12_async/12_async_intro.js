@@ -54,15 +54,15 @@ console.log("bye bye ");
 // EVENT QUEUE & EVENT LOOP EXAMPLE !
 /**
  * using setTimeout to demonstrate async 
- * setTimeout:  browser / node (runtime) based feature . js don't know how to execute it . js will take this call to the runtime .
+ * *IMPORTANT : setTimeout:  browser / node (runtime) based feature . js don't know how to execute it . js will take this callback function to the runtime .
  * even if runtime completed its task before loop/js , js won't listen to runtime and will keep on executing its own native code.
  * it can't hinder the flow of js , therefore it will make the callback and wait in the queue . 
  * runtime will pass that callback to event queue , it will wait in there . when it will be executed ?
  * event loop is kind of like a infinite loop . it will keep on check for the "conditions" .
  * if the conditions are true , it will pop out the first task(inner-most) from the event queue and get entry in the call stack and executing it .
  * the conditions to start executing tasks from event queue are , 
- * 1. the call stack should be empty i.e. no function in the call stack is left to be executed .
- * 2. the global code is also done. 
+ * *1. the call stack should be empty i.e. no function in the call stack is left to be executed .
+ * *2. the global code is also done. 
  * NOTE : synchronous writes block the event loop  
  * NOTE : search http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D 
  * for event , call stack visualization 

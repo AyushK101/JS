@@ -6,43 +6,44 @@
  * And promise object automatically handles the execution of this functionality.
  * So promises do two things :
  * 1) it sings up the process request to run in the runtime and give a placeholder in JS , which has value property .
- * NOTE : promises will halt the code flow because they are defined in JS i.e. sync .
+ * NOTE : promises will halt the code flow because they are defined in JS i.e. sync.
+ ** (if promise contains async code , js won't stop at that)
  * 
  */
 
 /** how promises work behind the scenes ?
  * the promise object that we create has 4 major properties 
- * 1. status / state 
- * 2. value 
- * 3. onfulfillment 
- * 4. onreject 
+ ** 1. status / state 
+ ** 2. value 
+ ** 3. onfulfillment 
+ ** 4. onreject 
  * 
  */
 
 /** 1. status(state) :
  * status shows current promise status . 
  * any promise can have 3 states : 
- * pending states : some processing is going on , and yet to be completed 
- * fulfilled state : whatever processing promise was involved in that processing is successfully completed  : success state 
- * rejected state : if processing get some error : error state 
+ ** pending states : some processing is going on ,and promise is yet to be completed.
+ ** fulfilled state : whatever processing promise was involved in ,now that processing is successfully completed (success state) 
+ ** rejected state : if processing get some error (error state) 
  */
 
-/** 2. value : 
+/** 2. value :
  * when the status of promise is pending , then this value property is undefined .
- * *The moment promise is resolved(status => fulfilled ) , the value property is updated from undefined to the new value(actual value of process) .
- * *{this value can also be considered as returned value OR resolved value} 
+ ** The moment promise is resolved(status => fulfilled ) , the value property is updated from undefined to the new value(actual value of process) .
+ ** {this value can also be considered as returned value OR resolved value} 
  * so the value property acts like placeholder till the promise is finished . 
  * {we will see why this property being a placeholder is useful for us} 
- * we will first understand promise with respect to success , then we will also discus errors .
+ * {we will first understand promise with respect to success , then we will also discus errors}
  */
 
 /** 3. onfulfillment : 
- * This is an array , which contains functions that we attach to our promise object .
+ * *This is an array , which contains functions that we attach to our promise object .
  * 
  * *(to a promise object we can attach some functions using `.then` method)
- * *when the value property is updated from undefined , to the new value , JS will gives chance 
- * *to these functions one by one with the value property as their argument(if there is no piece of 
- * *code in the callstack and global code left .) 
+ * *when the value property is updated from (undefined=>new value) , JS will gives chance 
+ * *to these functions one by one with the value property as their argument.
+ * *(if there is no piece of code in the call-stack and global code left) 
  */
 
 // how can we write a function to mimic the download data from a url without using callbacks , 
@@ -52,10 +53,11 @@
 /** HOW WE CAN CREATE A PROMISE (only creation)  ?
  * 1. call the promise constructor 
  * 2. the promise constructor takes a callback as an a argument .
- * *3. the callback passed inside constructor expects two arguments , resolve and reject . NOTE: resolve can be assumed "returning a value for success" reject can be assumed "trowing error(..);"
- * 4. then inside the callback write your logic .
+ * *3. the callback passed inside constructor expects two arguments , resolve and reject . 
+ * NOTE: resolve can be assumed "returning a value for success" reject can be assumed "trowing error(..);"
+ * 4. then inside the callback write your logic.
  * *5. if you want to return something on success, 
- * then call resolve function (actually resolve and reject are functions ) 
+ * then call resolve function (actually resolve and reject are functions) 
  * with whatever value you want to return .
  * 
  * NOTE : how this promise object is implemented is already given in JS , 

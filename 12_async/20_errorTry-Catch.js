@@ -10,7 +10,7 @@
  * It immediately returns an equivalent Promise object, allowing you to chain calls to other promise methods.
  */
 
-
+// .THEN AND .CATCH SYNTAX
 function fetchData(url) {
     return new Promise( function (resolve , reject ) {
         console.log("started downloading from" , url ) 
@@ -42,10 +42,11 @@ x.then(function res(value) {
 
   
 //#########################################
-//error handling in async-await 
-//The try...catch statement is comprised of a try block and either a catch block, a finally block, or both. 
-//The code in the try block is executed first, and if it throws an exception, the code in the catch block will be executed. 
-//The code in the finally block will always be executed before control flow exits the entire construct.
+//* ERROR HANDLING IN ASYNC-AWAIT ( try-catch blocks )
+ 
+// *The try...catch statement is comprised of a try block and either a catch block, a finally block, or both. 
+// *The code in the try block is executed first, and if it throws an exception, the code in the catch block will be executed. 
+// *The code in the finally block will always be executed before control flow exits the entire construct.
 
 async function proccess1 () {
     try {

@@ -67,12 +67,14 @@ function uploaddata(filename , newurl) {
 
 //another method (but with promise hell)
 let downloadPromise = fetchdata("www.google.com");
+console.log(`type of downloadPromise is ${typeof downloadPromise}`)
+
 downloadPromise.then(function (value) {
     console.log("download promise fulfilled");
     console.log(value);
     //*now we have `value` access here 
     
-    let writePromise = writefile(value); //*using value from downloadPromise .
+    let writePromise = writefile(value); //*using value from downloadPromise.
     writePromise.then(function (value) {
         console.log("write promise fulfilled");
         console.log(value);

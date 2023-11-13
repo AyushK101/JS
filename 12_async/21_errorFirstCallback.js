@@ -1,5 +1,4 @@
-//######################################
-// error in callbacks 
+// error in callbacks :-
 // ERROR FIRST CALLBACK 
 // the first argument of the callback function is error
 
@@ -18,3 +17,4 @@ fetchCustom("www.google.com" , function fun(err ,response) {
     }
     console.log("response is " , response);
 })
+
