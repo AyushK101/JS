@@ -1,5 +1,9 @@
-/** OOPS
- *
+///!this keyword in JavaScript, it refers to the current instance of the object 
+//! on which a method or function is being invoked.
+//ex: let x = new Obj("ayush"); => here x is the current instance of object Obj.
+
+
+/** OOPS:-
  * ex: e-commerce(flipkart) -> thousands of products -> every product has :-
  * common properties (name , images , description , price , discount , review .....) , common behaviors ( buy , add to cart , add review ....)
  * Can't make a new file for thousands of products , therefore make a template(blueprint)
@@ -23,7 +27,7 @@
  *
  *
  * To define data members , we need to initialize them inside the constructor function.
- * We use the "this" keyword to initialize data members.
+ *? We use the "this" keyword to initialize data members.
  *
  */
 
@@ -35,7 +39,7 @@
 
 class product {
     discount = 12;
-
+ 
 
     constructor(n, p) {
 
@@ -83,9 +87,9 @@ iphone.displayProduct();
 function Product(n , p)   {  //CONSTRUCTOR FUNCTION
     this.name=n;
     this.price=p;
-    // if you don't write return statement , it assumes => return this;       where , this={name:"n" , price:"p"}
-    // or if you return a object yourself it will return that , like below 
-    //  return {name:"bob" , price:1999};
+    // *if you don't write return statement , it assumes => return this;       where , this={name:"n" , price:"p"}
+    // *or if you return a object yourself it will return that , like below 
+    //  *return {name:"bob" , price:1999};
 
 }
 
@@ -97,11 +101,11 @@ console.log(p2);
 /**
  * the new keyword actually  executes a 4 step process:-
  * 1. It creates a brand new  empty JS object.
- * 2. It does a process of linking.
- * 3. Calls the function with the this property assigned to the empty object it created before.
- * *  , i.e , this = {}
+ * 2. It does a process of linking to <function/class>.prototype .
+ * 3. Calls the function ; with the `this property` assigned to the empty object it created before.
+ * *  , i.e. , this = {}
  * 4. The function execution starts and we know "this" keyword belongs/refers to the calling site.
- * *  ,.i.e , if this.name="ayush"; , just like a object , it will add/modify the name="ayush" key-value pair in the this = {} object.
+ * *  , i.e. , if this.name="ayush"; , just like a object , it will add/modify the name="ayush" key-value pair in the this = {} object.
  * 
  **   At last , if function doesn't "return" any specific object , then it automatically "return `this`;" (this={ //key-value })
  *    otherwise it returns the object(only object) returned by you.
@@ -116,29 +120,4 @@ console.log(p2);
  *  
  */
 
-
-//################################################### day-2
-
-// PROTOTYPES
-
-/**
- * In other languages , objects are based on classes.
- * Whereas , In JS we don't have any mental model of copy.
- * 
- * * The objects are going to be linked to their prototypes somehow.
- *   
- */
-
-/** WHAT IS PROTOTYPES ?
- * *It is a mechanism using which JS objects inherits features from one another.
- * 
- * *every object will be by default having a property named as "prototype" .
- * our object  has a prototype which is linked to an object which is having its own prototype(named "dunno protoype") which is linked to an object that is having prototype:null(no prototype) and can be soon before null.
- * 
- *  
- * 
- * */
-
-// whenever you make changes to this prototype , it will make changes reflect to its objects also.
-// property attached to class after the creation of object but object can still access it.
 
