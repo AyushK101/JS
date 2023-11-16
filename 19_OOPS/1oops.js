@@ -1,5 +1,7 @@
-///!this keyword in JavaScript, it refers to the current instance of the object 
-//! on which a method or function is being invoked.
+//!    "this" keyword in JavaScript => it refers to the "current instance of the object" on which a method or function is being invoked.
+
+//todo: In JS this keyword refers to the calling context(site) , i.e, from where the function or class has been called (but in arrow function it will be resolved lexically)
+
 //ex: let x = new Obj("ayush"); => here x is the current instance of object Obj.
 
 
@@ -70,8 +72,8 @@ iphone.displayProduct();
 
 
 /** THIS keyword:-
- * Behavior of this in JS is different than c++ or java.(in c++ or java this refers to the same object)
- * *In JS this keyword refers to the calling site , i.e, from where the function or class has been called. 
+ *      Behavior of this in JS is different than c++ or java.(in c++ or java this refers to the same object)
+ *todo: In JS this keyword refers to the calling context(site) , i.e, from where the function or class has been called. 
  */
 
 /** NEW keyword:-

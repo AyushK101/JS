@@ -39,6 +39,7 @@
 
 // GLOBALS :-
 // *these are objects which are predefined/ implemented by js,access everywhere in the JS code.
+//! in node's env , node's global = browser's window
 
 // EX: runtime give access of features to JS , one of them is accessing the html,
 // how to you access ? browser environment give global `document`.

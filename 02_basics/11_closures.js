@@ -1,3 +1,7 @@
+//! Closures in JavaScript are pretty cool! Think of them as a way for functions to remember the environment they were created in, even after that environment is gone.
+
+
+
 // *Closures are functions that have access to the variables that are present in their scope chain even if the outer function ceases to exist.
 // Scope chain refers to the fact that parent scope does not have access to the variables inside its children's scope,
 // but the children's scope does have access to the variables present in its parent scopes. 
