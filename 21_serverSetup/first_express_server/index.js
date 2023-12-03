@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express(); //returns an instance of the Express application, which is essentially an object.
+//! creates a http server under the hood (upper line).
 const PORT = 3000;
 
 app.get('/' , function(req , res) {

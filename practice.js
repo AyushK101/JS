@@ -1,13 +1,19 @@
-let arr = [ 2 , 3 , 4 , 4];
-let res = arr.filter( ( _ , index )=> {
-    return index > 1;
-});
-console.log(res);
+const MyObject = {
+    createDiv: function() {
+      this.newDiv = document.createElement("div");
+      this.newDiv.textContent = "This div is created inside an object!";
+      // Manipulate or style the element further if needed
+    },
+    appendToBody: function() {
+      document.body.appendChild(this.newDiv); // Append the created element to the body
+    }
+  };
+  
+  MyObject.createDiv(); // Create the div
+  MyObject.appendToBody(); // Append it to the body
+  
+  let body = document.querySelector("body");
 
 
-const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+console.dir(body.childNodes);
 
-const result = words.filter((word) => word.length > 6);
-
-console.log(result);
-// Expected output: Array ["exuberant", "destruction", "present"]

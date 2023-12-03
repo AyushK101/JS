@@ -113,6 +113,9 @@ ex: http , tcp , smtp , udp etc.
 
 
 - `client-server architecture`: it is a 2 lvl architecture.
+> client server architecture  states that whenever you want to communicate between two machines , one needs to be a server and one need to be a client.
+> in real world this server are big aws machines and clients are mobile app , browser desktop app etc.
+
 > `SERVERS` : this process controls access to a centralized resource or service such as a website or webapp.  
 > `client` : the main screen (frontend).
 - `P2P architecture` (peer to peer) : many end users , no concept of servers . ex: torrent.
@@ -120,6 +123,7 @@ ex: http , tcp , smtp , udp etc.
 
 
 ## http - `hyper text transfer protocol ` - a protocol in application layer 
+> http is a `request-response protocol`.
 - it defines the whole procedure oh how the client & server will interact.
 - if you want to send a data like hypertext , then all the rules and regulations are written inside http.
 - `object`: web pages are the main object that contains other objects. Some other objects can be mp3 , jpg etc.

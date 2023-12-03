@@ -31,11 +31,15 @@ An HTMLCollection is also a collection of nodes, specifically a collection of HT
 
 # selecting the element 
 1. getElementById('id');
-2. getElementsByClassName('class'); = returns a `array-like` collection of elements which is HTMLCollection.
-3. getElementsByTagName('tag'); = returns a `array-like` collection of elements {HTMLCollection}
-4. getElementsByName('name'); = give nodeList of elements of specified name attribute
-5. querySelector('cssSelector'); = select the first element 
-6. querySelectorAll('cssSelector'); = gives a nodeList of selected elements
+2. getElementsByClassName('class'); 
+3. getElementsByTagName('tag');
+4. getElementsByName('name'); = 
+5. querySelector('cssSelector'); 
+6. querySelectorAll('cssSelector'); 
 
-
-
+-------
+1. browser make document object and store it inside window 
+2. browser take every entity{element , text , indent...everything} , make it a object and store it inside `document` object.
+3. these `entity objects have a lot of properties and methods`. 
+> methods as `actions` you can perform on these entities and properties as `values` you can get and set.
+4. ex: style object , 
