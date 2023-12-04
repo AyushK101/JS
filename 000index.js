@@ -1,3 +1,12 @@
+/** 01_basics: 
+ * 01_intro : info , program-flow , 
+ * 
+ */
+
+
+
+typeof return us the string which contains the type description of the value .
+
 let str="hero";
 let str2 = `this is global document object `;
 

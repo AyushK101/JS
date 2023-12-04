@@ -1,9 +1,3 @@
-/**METHODS -
- * In JavaScript, methods are functions that are associated with objects.
- *  These functions can be called on the object to perform specific actions or operations.
- *  Methods allow you to encapsulate behavior that is relevant to a particular object,
- *  making your code more organized and easier to work with.
- */
 
 /** PROTOTYPES :-
  * prototype is a fundamental concept that is used to implement object-oriented programming. 
@@ -12,6 +6,8 @@
  * These prototypes are used to create a chain of inheritance,
  *  allowing objects to inherit properties and methods from their prototypes.
  */
+
+
 
 function fun() {
     return new Promise( (res , rej) => {
