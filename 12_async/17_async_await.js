@@ -1,9 +1,10 @@
-/** ASYNC FUNCTIONS
+/** 
+ * !ASYNC FUNCTIONS
  * ASYNC-AWAIT IS SYNTACTICAL SUGAR FOR .THEN
  * We can declare a function async.
  * If you declare a function async , it does the following :
  * 1. It allows the use of `await` keyword {you can't use await keyword outside async function except global scope of module}
- * 2. If you declare a function async , it allows consumption of promise using await.
+ *!2.If you declare a function async , it allows consumption of promise using await.
  * 3. An async function always converts your return value to a promise.
  * 
  * NOTE:-

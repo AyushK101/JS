@@ -7,28 +7,27 @@
  * ANS :- we can't say , therefore we consider `IT DOESN'T` .
  * *NOTE: in production level code , we won't use console.log , therefore no worry !)
  */
-// 
 
-// 
 
-/** disadvantages of callbacks ? WHY WE NEED PROMISES !
+/** 
+ * !disadvantages of callbacks ? WHY WE NEED PROMISES !
 ** 1. callback hell : code readability hampers 
 ** 2. inversion of control : when you give your function to other function , 
 * then you give control of it to that function , now it depends on it weather it will 
 * call it or not (but you want to) , call it twice or multiple times (but you wanted only once ) .
 * OR 
 * *if there is some part of code whose control we are passing to someone else and we don't know 
-* *how that part will be executed .
-* 
+* *how that part will be executed.
 */
 
-/** TASKS: CALLBACK HELL 
+/** 
+ * !TASKS: CALLBACK HELL 
  * 1) write a function to download data from url
  * 2) write a function to save the download in a file and return the filename.
  * 3) write a function to upload the file to a new url.
  */
 
-//we are using callback because there is no way to return the value from fetchCustom as it gets ended .
+//!we are using callback because there is no way to return the value from fetchCustom as it gets ended .
 //Pass the response in the callback and access that response in the callback function .
 
 // download some data from url

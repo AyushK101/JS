@@ -1,17 +1,18 @@
-// *Asynchronous programming is a technique that enables your program to start a potentially long-running task and still be able to be responsive to other events while that task runs,
+//!Asynchronous programming is a technique that enables your program to start a potentially long-running task and still be able to be responsive to other events while that task runs,
 // rather than having to wait until that task has finished. Once that task has finished, your program is presented with the result.
 
 //How JS  handles ASYNC operations ?
-
 /**
- * javascript is a single threaded language.
- * javascript by default only supports synchronous code execution .
- * SYNCHRONOUS JS : if there are 4 line of code , then the 3rd line will only be executed if and only if 2nd line's execution is done, no matter the amount of time .
- * NOTE : the above property of sync code execution only works for operations natively known to javascript . ex: for loop is given in js , therefore sync code execution .
+ * JavaScript uses a single-threaded model with a concurrent event loop. 
+ * This means that it can only execute one piece of code at a time, but it can manage 
+ *! multiple tasks by offloading them to the browser or runtime environment. 
+ * When an asynchronous operation, like fetching data from a server or waiting for a
+ * user's action, is initiated, the callback associated with that operation gets queued 
+ * in the event loop.
  * 
- *  */
+*/
 
-// JS RUNTIME : 
+//!JS RUNTIME : 
 /**
  * initially when js was made , it was made to run inside browser only.
  * then what browser js what ? browser gave a lot of facilities to js program .
@@ -26,13 +27,11 @@
  * 
  * now we know that runtime also provides functionalities that can be leveraged by JS .
  * but how js handles them ?
- * 
- * 
  */
 
 function process( )  {
     console.log("start");
-    setTimeout(function exec() {  
+    setTimeout(function exec() {  // a async function went to web-api
         
         console.log("executed some task")
     }, 3000);
@@ -51,7 +50,7 @@ console.log("bye bye ");
  * ans: 
  */
 
-// EVENT QUEUE & EVENT LOOP EXAMPLE !
+//! EVENT QUEUE & EVENT LOOP (through example)
 /**
  * using setTimeout to demonstrate async 
  * *IMPORTANT : setTimeout:  browser / node (runtime) based feature . js don't know how to execute it . js will take this callback function to the runtime .

@@ -1,4 +1,5 @@
-/**`.THEN` CHAINING:-
+/**
+ * !`.THEN` CHAINING:-
 ** NOTE : .then function itself returns a new promise object. 
 ** OR `.then` function internally creates a promise and when the code is executes , it is resolved.
 * We can store .then expression in a new variable.

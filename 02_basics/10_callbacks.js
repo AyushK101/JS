@@ -1,12 +1,7 @@
-//A callback function is a function that is passed as an argument to another function, 
 
-// *any function that get called asynchronously is callback 
-// *basically any function called by web api is callback 
 
 //to be “called back” at a //*later time .
-//A function that accepts other functions as arguments is called a higher-order function, which contains the logic for when the callback function gets executed. It’s the combination of these two that allow us to extend our functionality
 
-// ex: f(g(x)) => g(x) is kind of like a callback in maths 
 // *to pass a callback we can use function expression .
 
 
@@ -27,7 +22,6 @@
 // function callback(){
 // console.log("Hello world");
 // }
-
 // button.addEventListener('click',callback);
 
 

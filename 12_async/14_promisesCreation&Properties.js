@@ -1,4 +1,5 @@
-/** PROMISES : 
+/** 
+ * !PROMISES : 
  * promises are special JS objects that are also considered as readability enhancers.
  * They get immediately returned from the function setup to return a promise .
  * They act as placeholder(temp. value) for the data we hope to get back from some future task .
@@ -11,7 +12,8 @@
  * 
  */
 
-/** how promises work behind the scenes ?
+/** 
+ * !how promises work behind the scenes ?
  * the promise object that we create has 4 major properties 
  ** 1. status / state 
  ** 2. value 
@@ -20,7 +22,8 @@
  * 
  */
 
-/** 1. status(state) :
+/** 
+ * !1. status(state) :
  * status shows current promise status . 
  * any promise can have 3 states : 
  ** pending states : some processing is going on ,and promise is yet to be completed.
@@ -28,7 +31,8 @@
  ** rejected state : if processing get some error (error state) 
  */
 
-/** 2. value :
+/** 
+ * !2. value :
  * when the status of promise is pending , then this value property is undefined .
  ** The moment promise is resolved(status => fulfilled ) , the value property is updated from undefined to the new value(actual value of process) .
  ** {this value can also be considered as returned value OR resolved value} 
@@ -37,7 +41,8 @@
  * {we will first understand promise with respect to success , then we will also discus errors}
  */
 
-/** 3. onfulfillment : 
+/** 
+ * !3. onfulfillment : 
  * *This is an array , which contains functions that we attach to our promise object .
  * 
  * *(to a promise object we can attach some functions using `.then` method)
@@ -49,8 +54,8 @@
 // how can we write a function to mimic the download data from a url without using callbacks , 
 // instead use PROMISES ?
 
-
-/** HOW WE CAN CREATE A PROMISE (only creation)  ?
+/**
+ * ! HOW WE CAN CREATE A PROMISE (only creation)  ?
  * 1. call the promise constructor 
  * 2. the promise constructor takes a callback as an a argument .
  * *3. the callback passed inside constructor expects two arguments , resolve and reject . 
@@ -159,7 +164,8 @@ console.log("new promise object created successfully , but downloading still goi
  * *:we do resolve(data) means state:pending ==> state:fulfilled & value:undefined ==> value:data
  */
 
-/** WHEN DO WE CONSIDER A PROMISE FULFILLED ?
+/**
+ * ! WHEN DO WE CONSIDER A PROMISE FULFILLED ?
  * if we call resolve(); , we consider it fulfilled .
  * we consider it rejected , if we call reject();
  * NOTE: creation of a promise object is synchronous . 

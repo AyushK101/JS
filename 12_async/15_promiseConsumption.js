@@ -1,4 +1,4 @@
-//CONSUMING A PROMISE ! 
+//!CONSUMING A PROMISE ! 
 /** 
  * 
  * Whenever we call a function , returning a promise , we will get a promise object which is like any other JS object that we can store in a variable .
@@ -6,11 +6,11 @@
  * QUES: will js wait for promise to be resolved if it involves any async piece of code ?
  * *ans: if creation of promise involves sync piece of code it will wait , otherwise not.
  * 
- * *After completely resolving the promise , we can perform function on it which can be registered in `onfulfillment`through `.then` . 
+ * *After completely resolving the promise , we can perform function on it which can be registered in `onfulfillment` through `.then` . 
  * 
- * *we can use `.then` function to consume a promise. WHEN THE STATE OF PROMISE CHANGES FROM PENDING TO (RESOLVE,REJECT) , THEN WE CALL `.THEN`
+ *!we can use `.then` method to consume a promise. WHEN THE STATE OF PROMISE CHANGES FROM PENDING TO (RESOLVE,REJECT) , THEN WE CALL `.THEN`
  * 
- * *`.then` function takes function as an argument that we want to execute after promise state changes , and that argument function takes `value` as an argument. 
+ *!`.then` function takes callback as an argument that we want to execute after promise state changes , and that argument function takes `value` as an argument. 
  * 
  * NOTE: .then only registers your function inside onfulfillment array 
  * 
